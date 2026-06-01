@@ -5,12 +5,17 @@ Nesta atividade, vamos trabalhar com uma API de mercado para montar uma interfac
 
 ## Informações Gerais
 
-- Nome:
-- Matricula:
+- Nome:Marcelo Artur Soares Sartori
+- Matricula:924057
 
 ## Prints do trabalho
 
 <<  COLOQUE A IMAGEM - LISTA DE CARDS COM FILMES - AQUI >>
-
+![alt text](<Captura de tela 2026-06-01 180305.png>)
 <<  COLOQUE A IMAGEM - RESULTADO DE UMA PESQUISA - AQUI >>
+![alt text](<Captura de tela 2026-06-01 180459.png>)
 
+O endpoint escolhido foi o de filmes mais bem avaliados (top_rated):
+https://api.themoviedb.org/3/movie/top_rated?api_key=SUA_CHAVE&language=pt-BR&page=1
+
+Ao carregar a página ou acionar busca/filtro, a função fetchMovies() monta a URL e faz uma chamada com fetch() à API do TMDB. A resposta é convertida com .json() e o array results é extraído — erros são capturados com try/catch. Em seguida, renderMovies() itera sobre os filmes, criando cada card via createMovieCard() e inserindo no DOM com appendChild().
